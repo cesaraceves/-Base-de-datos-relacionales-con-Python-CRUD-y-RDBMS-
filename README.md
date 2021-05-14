@@ -11,36 +11,39 @@
  
  ### Conectar base de datos
  Para crear una tabla se utilizó este código:
- > conn = sqlite3.connect('customer.db')
-
+ ```
+ conn = sqlite3.connect('customer.db')
+ ```
  ### Crear cursor
- > c = conn.cursor()
-
+ ```
+ c = conn.cursor()
+```
  ### Crear Tabla 
  
  Para crear una tabla se utilizó este código:
- >c.execute("""CREATE TABLE customers (
+ ```
+ c.execute("""CREATE TABLE customers (
 		first_name text,
 		last_name text,
 		email text
 		)""")
->
+```
 
 ### Insertar registros en una tabla
-
->c.execute("INSERT INTO customers VALUES ('John', 'Elder','john@codemy.com')")
-
+```
+c.execute("INSERT INTO customers VALUES ('John', 'Elder','john@codemy.com')")
+```
 
 ### Insertar varios registros en una tabla
-
->many_customers = [
+```
+many_customers = [
 					('Wes', 'Brown', 'wes@brown.com'),
 					('Steph', 'Kuewa', 'steph@kuewa.com'),
 					('Dan', 'Pas', 'dan@pas.com'),
 				]
 				c.executemany("INSERT INTO customers VALUES (?,?,?)", many_customers)
 print("Command executed succesfully...")
-
+```
 ## Consultas
 
 ### Consulta llave primaria
