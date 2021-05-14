@@ -5,7 +5,8 @@
  Para iniciar cómo se creó la base de datos, es necesario instalar primero SQLite y Python.
  
  ### Importar base de datos
- >import sqlite 3
+ ```import sqlite 3
+ ```
  
  ### Conectar base de datos
  Para crear una tabla se utilizó este código:
