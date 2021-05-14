@@ -147,7 +147,7 @@ database.add_many(stuff)
 
 ### Consultas Registros
 En database.py se tiene que agregar este código:
-def email_lookup(email):
+>def email_lookup(email):
 	conn = sqlite3.connect('customer.db')
 	c = conn.cursor()
 	c.execute("SELECT rowid, * from customers WHERE email = (?)", (email,))
