@@ -169,6 +169,7 @@ database.add_many(stuff)
 ### Consultas Registros
 En database.py se tiene que agregar este código:
 
+```
 def email_lookup(email):
 	conn = sqlite3.connect('customer.db')
 	c = conn.cursor()
@@ -176,11 +177,11 @@ def email_lookup(email):
 	items = c.fetchall()
 	for item in items:
 		print (item)
-		
-		
+```		
+	
 		
 	
-Para ejecutarlo en el our_app.py se utiliza este código:
+#Para ejecutarlo en el our_app.py se utiliza este código:
 
 database.email_lookup("john@codemy.com")
-
+```
